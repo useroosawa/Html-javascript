@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>体育館の利用料金</title>
+		<style>
+		body{
+			padding: 0px 15px;
+			}
+		h1 {
+			border-bottom: soild 2px #000000;
+			line-height: 1.2;
+			}
+		p {
+			font-size: 20px;
+			}
+		#total {
+			font-weight: bold;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>football pitch Fee</h1>
+		<p>Basic Fee(2h) £20</p>
+		<form onchange="checkSum();">
+			<label><input type="checkbox" id="c1">Lights(£10)</label><br/>
+			<label><input type="checkbox" id="c2">Goalpost(£3)</label><br/>
+ 			<label><input type="checkbox" id="c3">a ball(£4)</label><br/>
+		</form>
+		<p>Total <span id="total">£20</span></p>
+	<script>
+		function checkSum(){
+			let price = 20;
+			if(document.getElementById('c1').checked === true){
+				price = price + 10;
+			}
+			if(document.getElementById('c2').checked === true){
+				price = price + 3;
+			}
+			if(document.getElementById('c3').checked === true){
+				price = price + 4;
+			}
+			document.getElementById('total').textContent = '£' + price;
+		}
+	</script>
+	</body>
+</html>

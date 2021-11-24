@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+		#message {
+			width: 250px;
+			border: solid 3px #FF9999;
+			padding: 15px;
+			margin-top: 30px;
+		}
+		</style>
+	</head>
+	<body>
+	<h3>Question</h3>
+	<p>What is the name of the hightest mountain in Japan？<button onclick="showAnswer();">To see the answer<button></p>
+	<div id="message">Here is the answer</div>
+	<script>
+	function showAnswer(){
+		document.getElementById('message').innerHTML = 'The answer is Mt Fuji<br/><img src="mt_fuji.jpg" alt="pic of Mt Fuji">';
+	}
+
+	</script>
+	</body>
+</html>

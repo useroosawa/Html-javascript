@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style></style>
+	</head>
+	<body>
+		<h2>Picture</h2>
+		<div>
+			<select id="photo">
+				<option value="pic01.jpg">Hotel</option>
+				<option value="pic02.jpg">Ocean</option>
+				<option value="pic03.jpg">Food</option>
+				<option value="pic04.jpg">Hotel2</option>
+				<option value="pic05.jpg">Sunset</option>
+				<option value="pic06.jpg">Beach</option>
+				<option value="pic07.jpg">Harbor</option>
+			</select>
+		</div>
+		<img src="big_pic01.jpg" id="bigPhoto">
+	<script>
+		let $photo = document.getElementById('photo');
+		let $bigPhoto = document.getElementById('bigPhoto');
+		$photo.addEventListener('change', photoChange);
+		function photoChange(){
+//			$bigPhoto.remove();
+			$pho = [];
+			switch ($photo.value){
+			case 'pic01.jpg':
+				$bigPhoto.setAttribute('src', 'big_pic01.jpg');
+//				$pho = pic01.jpg;
+				break;
+			case 'pic02.jpg':
+				$bigPhoto.setAttribute('src', 'big_pic02.jpg');
+//				$pho = pic02.jpg;
+				break;
+			case 'pic03.jpg':
+				$bigPhoto.setAttribute('src', 'big_pic03.jpg');
+//				$pho = pic03.jpg;
+				break;
+			case 'pic04.jpg':
+				$bigPhoto.setAttribute('src', 'big_pic04.jpg');
+//				$pho = pic04.jpg;
+				break;
+			case 'pic05.jpg':
+				$bigPhoto.setAttribute('src', 'big_pic05.jpg');
+//				$pho = pic05.jpg;
+				break;
+			case 'pic06.jpg':
+				$bigPhoto.setAttribute('src', 'big_pic06.jpg');
+//				$pho = pic06.jpg;
+				break;
+			case 'pic07.jpg':
+				$bigPhoto.setAttribute('src', 'big_pic07.jpg');
+//				$pho = pic01.jpg;
+				break;
+			}
+		}
+
+	</script>
+	</body>
+</html>

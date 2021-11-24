@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+		th { background: red; }
+		.color{ background: red; }
+		</style>
+	</head>
+	<body>
+	<table border="1">
+		<tr>
+			<th>No.</th><th>price(a)</th><th>people(b)</th><th>a×b</th>
+			<th>Total Price</th>
+		</tr>
+		<td class="color"><p>0</p></td>
+		<td><p id="a"></p></td>
+		<td><p id="b"></p></td>
+		<td><button  onclick="times1();">price</button></td>
+		<td><p id="total1">0</p></td>
+		<tr>
+		</tr>
+		<td class="color"><p >1</p></td>
+		<td><p id="d"></p></td>
+		<td><p id="e"></p></td>
+		<td><button  onclick="times2();">price</button></td>
+		<td><p id="total2">0</p></td>
+		<tr>
+
+		</tr>
+		<td class="color"><p>2</p></td>
+		<td><p id="f"></p></td>
+		<td><p id="g"></p></td>
+		<td><button onclick="times3();">price</button></td>
+		<td><p id="total3">0</p></td>
+		<tr>
+
+		</tr>
+	</table>
+	<script>
+		let h = [5,10,128];
+		let i = [10,16,8];
+		document.getElementById('a').textContent = h[0];
+		document.getElementById('b').textContent = i[0];
+		document.getElementById('d').textContent = h[1];
+		document.getElementById('e').textContent = i[1];
+		document.getElementById('f').textContent = h[2];
+		document.getElementById('g').textContent = i[2];
+		function times1(){
+		let a = parseInt(document.getElementById('a').textContent);
+		let b = parseInt(document.getElementById('b').textContent);
+		let c = a * b;
+		document.getElementById('total1').textContent = c;
+		}
+		function times2(){
+		let a = parseInt(document.getElementById('d').textContent);
+		let b = parseInt(document.getElementById('e').textContent);
+		let c = a * b;
+		document.getElementById('total2').textContent = c;
+		}
+		function times3(){
+		let a = parseInt(document.getElementById('f').textContent);
+		let b = parseInt(document.getElementById('g').textContent);
+		let c = a * b;
+		document.getElementById('total3').textContent = c;
+		}
+
+	</script>
+	</body>
+</html>

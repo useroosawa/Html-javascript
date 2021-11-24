@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#time{
+				font-size: 32px;
+				color: #FFFFFF;
+				background-color: #333333;
+				padding: 0px 8px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>NowTime</h1>
+		<p>The time is <span id="time"></span></p>
+	<script>
+			let $hh,$mm,$ss;
+			let $show = setInterval(function(){
+				let $time = new Date();
+				$hh   = $time.getHours();
+				$mm   = $time.getMinutes();
+				$ss   = $time.getSeconds();
+
+				if($hh < 10){
+					$hh = '0' + $hh;
+				}
+				if($mm < 10){
+					$mm = '0' + $mm;
+				}
+				if($ss < 10){
+					$ss = '0' + $ss;
+				}
+				document.getElementById('time').innerHTML = $hh + ':' + $mm + ':' + $ss;
+			 }, 1000);
+
+
+	</script>
+	</body>
+</html>
