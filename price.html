@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>array</title>
+    </head>
+    <body>
+        <table border="1">
+            <tr>
+                <th>No.</th><th>Price</th><th>Persons</th><th>Price</th>
+            </tr>
+            <tr>
+                <td>0</td><td><input type="text" id="price" size="5" maxlength="10" value="500"></td><td><input type="text" id="person" size="5" maxlength="10" value="10"></td><td><span id="total">
+                    <button onclick="calc()" id="btn">price</button></span></td>
+            </tr>
+            <tr>
+                <td>1</td><td><input type="text" id="price1" size="5" maxlength="10" value="980"></td><td><input type="text" id="person1" size="5" maxlength="10" value="16"></td><td><span id="total1">
+                    <button onclick="calc1()" id="btn1">price</button></span></td>
+            </tr>
+            <tr>
+                <td>0</td><td><input type="text" id="price2" size="5" maxlength="10" value="1200"></td><td><input type="text" id="person2" size="5" maxlength="10" value="8"></td><td><span id="total2">
+                    <button onclick="calc2()" id="btn2">price</button></span></td>
+            </tr>
+            <tr>
+            </tr>
+        </table>
+    </body>
+    <script>
+        function calc(){
+            let price = Number(document.getElementById('price').value);
+            let person = Number(document.getElementById('person').value);
+            let btn = document.getElementById('btn');
+            let total;
+
+            total = price * person;
+            document.getElementById('total').textContent = total;
+        }
+        function calc1(){
+            let price = Number(document.getElementById('price1').value);
+            let person = Number(document.getElementById('person1').value);
+            let btn = document.getElementById('btn1');
+            let total;
+
+            total = price * person;
+            document.getElementById('total1').textContent = total;
+        }
+        function calc2(){
+            let price = Number(document.getElementById('price2').value);
+            let person = Number(document.getElementById('person2').value);
+            let btn = document.getElementById('btn2');
+            let total;
+
+            total = price * person;
+            document.getElementById('total2').textContent = total;
+        }
+
+    </script>
+</html>
